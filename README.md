@@ -46,7 +46,7 @@ Welcome to the **Chemistry Quiz** website! This interactive platform is designed
 
 Check out the live demo of the Chemistry Quiz:
 
-[peteryhs.github.io/chem-quiz](https://peteryhs.github.io/chem-quiz)
+[[peteryhs.github.io/chem-quiz](https://peteryhs.github.io/Chem-quiz/)]
 
 ## Technologies Used
 
