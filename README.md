@@ -1,5 +1,6 @@
 # Chemistry Quiz
 
+![License](https://img.shields.io/github/license/peteryhs/chem-quiz)
 
 
 ## Table of Contents
