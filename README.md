@@ -9,12 +9,6 @@
 - [Features](#features)
 - [Demo](#demo)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Overview
 
@@ -56,11 +50,4 @@ Check out the live demo of the Chemistry Quiz:
 - **Canvas-Confetti:** Adding celebratory animations for perfect scores.
 - **GitHub Pages:** Hosting the live version of the quiz website.
 
-## Installation
 
-To run this project locally on your machine, follow these steps:
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/peteryhs/chem-quiz.git
