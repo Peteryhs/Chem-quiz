@@ -251,11 +251,21 @@ function shuffleArray(array) {
     return array;
 }
 
-// Toggle Dark Mode
+
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
 }
 
+// Load Dark Mode preference on page load
+window.onload = () => {
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+};
 // Fuzzy Matching Function (Levenshtein Distance)
 function isCloseEnough(a, b) {
     const distance = levenshteinDistance(a, b);
@@ -304,4 +314,32 @@ function triggerConfetti() {
         spread: 70,
         origin: { y: 0.6 }
     });
+}
+
+const progressBar = document.getElementById('progress-bar');
+
+function displayQuestion() {
+    const currentQuestion = selectedQuestions[currentQuestionIndex];
+    questionNumberDiv.textContent = `Question ${currentQuestionIndex + 1} of ${selectedQuestions.length}`;
+    questionTextDiv.textContent = currentQuestion.question;
+    answerInput.value = '';
+    feedbackDiv.textContent = '';
+    answerInput.focus();
+    
+    // Update Progress Bar
+    const progressPercentage = ((currentQuestionIndex) / selectedQuestions.length) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+}
+
+function endQuiz() {
+    // Set progress bar to 100%
+    progressBar.style.width = `100%`;
+    quizContainer.style.display = 'none';
+    resultsDiv.style.display = 'block';
+    scoreP.textContent = `You scored ${score} out of ${selectedQuestions.length}.`;
+
+    // Check for perfect score
+    if (score === selectedQuestions.length) {
+        triggerConfetti();
+    }
 }
