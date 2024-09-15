@@ -168,3 +168,31 @@ body.dark-mode .container {
 .results button {
     animation: fadeIn 1s;
 }
+
+/* Feedback Animation */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.animate-feedback {
+    animation: fadeInOut 1.5s forwards;
+}
+
+
+#progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
